@@ -1,0 +1,26 @@
+.direccion{
+	width: 100%;
+	height: 560px;
+}
+img{
+	width: 100%;
+	height: 560px;
+}
+.lupa{
+	width: 40%;
+	height: 300px;
+	background-color: red;
+	float: right;
+}
+iframe{
+	margin-left: 20px;
+}
+.flechatexto h1{
+	margin-left: 20px;
+	margin-top:20px ;
+	margin-bottom: 20px;
+}
+.fachada{
+	width: 100%;
+	margin-top: 30px;
+}

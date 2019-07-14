@@ -1,0 +1,77 @@
+
+body{
+    margin: auto;
+}
+
+.contacto{
+    margin: auto;
+    width: 768px;
+    border: solid 3px black;
+    border-radius: 25px;
+    padding: 15px;
+    box-shadow: 10px 10px 5px #888888;
+}
+
+.contacto button{
+    width: 80px;  
+}
+
+.contacto img{
+    float: right;
+    clear: right;
+    height: 100px;
+}
+
+#buscar{
+    text-align: center;
+    width: 225px;
+}
+
+#busqueda{
+    text-align: center;
+    color: red;
+}
+
+h2{
+    background:  #E2ECEE;
+    font-size: 18px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 25px;    
+}
+
+.tabla-justificada {
+    table-layout: fixed;
+    text-align: center;
+}
+
+.cookie {
+    display: inline-block;
+    padding: 0 25px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 50px;
+    border-radius: 25px;
+    background-color: #f1f1f1;
+}
+  
+.cookie img {
+    float: left;
+    margin: 0 10px 0 -25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.closecookie {
+    padding-left: 10px;
+    color: #888;
+    font-weight: bold;
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.closecookie:hover {
+    color: #000;
+}

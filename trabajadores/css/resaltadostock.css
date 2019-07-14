@@ -1,0 +1,12 @@
+
+
+.datagrid table tbody .resaltarstock td { 
+	background-color: #F4666E; 
+	color: white; 
+	border: solid 1px black;
+}
+
+.centrar tr{
+
+	text-align: center;
+}

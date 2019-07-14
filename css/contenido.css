@@ -1,0 +1,83 @@
+.contenidoquienessomos div{
+	padding: 10px;
+}
+.qs2{
+	width: 100%;
+	height: 590px;
+}
+.qs2 img{
+	width: 100%;
+	height: 100%;
+	position: static;
+	top: ;
+	left:0px; 
+	z-index: 1;
+}
+.titulobanner {
+	position: absolute;
+	left:65%;
+	top: 110px;
+	color: #000;
+}
+.descripcionbanner{
+	width: 60%;
+	height: 140px;
+	position: absolute;
+	top: 310px;
+	left:30%;
+	right:0;
+	border: 4px solid #fff;
+	color: #000;
+}
+.descripcionbanner h1{
+	width: 100%;
+	position: static;
+	margin-top: 5px;
+	text-align:center; 
+}
+.descripcionbanner p{
+	width: 100%;
+	margin-top: 5px;
+	text-align:center; 
+}
+.qs3{
+	width: 100%;
+	height: 100%;
+}
+.qs3 h1{
+	width: 100%;
+	float: left;
+}
+.qs3 h3{
+	float: left;
+	width: 100%;
+	border-bottom: 3px solid deepskyblue;
+}
+.qs3 img{
+	float: left;
+}
+.clear{
+	clear: both;
+}
+.qs4{
+	background-color:;
+	width: 100%;
+}
+.qs4 h1{
+	width: 100%;
+	height: 20px;
+	margin-top: 50px;
+}
+.qs4 h3{
+	float: left;
+	margin-top: 15px;
+	margin-bottom: 40px;
+	border-bottom:3px solid deepskyblue; 
+}
+.qs4 img{
+	width: 100%;
+}
+.qs5 img{
+	width:100%;
+	margin-bottom: 0px;
+}

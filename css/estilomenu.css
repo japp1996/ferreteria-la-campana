@@ -1,0 +1,33 @@
+.dropdownnameuser{
+	color: #fff;
+	position: relative;
+	left: 50%;
+}
+.noped {
+	text-align: center;
+}
+.chip {
+	color: #fff;
+	display: inline-block;
+	padding: 0 25px;
+	height: 50px;
+	font-size: 16px;
+	border-radius: 25px;
+}
+.chip img {
+	float: left;
+	margin: 0 10px 0 -25px;
+	width: 50px;
+	border-radius: 50%;
+}
+.closebtn {
+	padding-left: 10px;
+	color: #888;
+	font-weight: bold;
+	float: right;
+	font-size: 20px;
+	cursor: pointer;
+}
+.closebtn:hover {
+	color: #000;
+}

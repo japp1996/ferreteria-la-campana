@@ -1,0 +1,73 @@
+.formregistro{
+	width: 100%;
+	margin:auto;
+	margin-top: 30px;
+	background-color: #fff;
+	max-width: 500px;
+	border-left: 5px solid #204862;
+	border-right:5px solid #204862;
+	border-bottom:5px solid #204862;
+	border-radius: 7px;
+	position: static;
+	padding-bottom: 10px;
+}
+.formregistro h2{
+	background-color: deepskyblue;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+	font-weight: 100;
+	font-size: 30px;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	border-bottom: 5px solid gray;
+}
+.form{
+	background-color: blue;
+}
+.texto{
+	background-color: red;
+}
+.contenedorinputs{
+	padding: 10px 30px;
+	margin-top: 0px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.contenedorinputs input{
+	margin-top: 15px;
+	font-size: 18px;
+	padding: 15px;
+	border-radius: 3px;
+	border: 1px solid darkgray;
+}
+.contenedorinputs label{
+	width: 100%;
+	margin-bottom: 0px;
+	margin-top: 5px;
+}
+.input50{
+	width: 48%;
+}
+.input100{
+	width: 100%;
+}
+.linkiniciosesion{
+	width: 100%;
+	margin-top: 25px;
+	font-size: 15px;
+	text-align: center;
+}
+.btnregistrar{
+	width: 40%;
+	background-color: crimson;
+	color: #fff;
+	border-radius: 3px;
+	margin: auto;
+	cursor: pointer;
+	font-size: 18px;
+}
+.btmregistrar:hover{
+	transform: scale(1.05);
+}

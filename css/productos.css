@@ -1,0 +1,69 @@
+.contenedor label{
+	width: 15px;
+	height: 15px;
+	background:orange;
+}
+#contenedor{
+	margin: 0px 0px 0px 0px;
+	background: ;
+	width: 1010px;
+	height: auto;
+}
+#header {
+	background: hsl(0,0%,39%);
+	overflow: hidden;
+	margin: 0px;
+	margin-bottom: 0px;
+	width:1010px;
+	height: 80px;
+	font-family: Arial;
+	font-size: 20px;
+	line-height: 40px;
+}
+.logo:hover{
+	background-color:hsl(45,80%,50%);
+}
+.logo{
+	padding-top: 100px;
+	margin-bottom: 16px;
+	line-height: 40px;
+	float: left;
+	font-size:40px;
+	width: 280px;
+	color: #000000;
+	text-decoration: none;
+	padding:0px 0px;
+	display:inline-block;
+	font-family:Arial;
+	font-weight: bold;
+}
+.logo a{
+	text-decoration: none;
+	color: #000000;
+}
+#header .nav{
+	margin-top: 40px;
+	margin: auto;
+	display: inline-block;
+	line-height: 80px;
+	float: right;
+}
+div #acordeon{
+	margin-top: 80px;
+	width: 600px;
+	min-height: 100px;
+}
+div.contenidoescondido{
+	width: 600px;
+	min-height: 50px;
+	background: green;
+}
+div.titulo{
+	width: 600px;
+	height: 40px;
+	background color: #24c06f;
+}
+p.titulo{
+	margin:13px;
+	color:#fff;
+}

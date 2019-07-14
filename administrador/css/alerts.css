@@ -1,0 +1,37 @@
+.alert {
+    padding: 20px;
+    background-color:  #1CA30B;   /* VERDE*/
+    color: white;
+    opacity: 1;
+    transition: opacity 0.6s;
+    margin-bottom: 15px;
+     /* 600 milisegundos para salir */
+}
+
+
+.alert.danger {
+    background-color: #f44336; /* ROJO */
+}
+
+.alert.info {
+    background-color: #5bc0de; /* AZUL CLARO */
+    
+}
+/* diseño del boton cerrar */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/*para pasar mouse x el boton cerrar */
+.closebtn:hover {
+    color: black;
+}
+
+
