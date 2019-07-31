@@ -29,7 +29,7 @@ $resultado=mysqli_query($conexion,$query);
 
 
 fclose($ejecutar);
-echo '<script language="JavaScript">alert("Restauracion Exitosa"); window.location="../restaurarbasededatos.php";</script>';
+echo '<script language="JavaScript">Swal.fire("Restauracion Exitosa"); window.location="../restaurarbasededatos.php";</script>';
 									$fecha=date('Y-m-d g:i:s-a');
 									$auditoria="INSERT INTO auditoria_usuarios(ID_AUDITORIA,CI_RIF,OPERACION,DETALLES_OPERACION,FECHA) VALUES('','".$_SESSION['CI_RIF']."','Restauracion','Restauracion de la Base de datos','$fecha')";
 									mysqli_query($conexion, $auditoria);

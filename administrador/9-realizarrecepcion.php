@@ -18,6 +18,7 @@
                             <th>Descripcion del articulo</th>
                             <th>Categoria</th>
                             <th>Existencia</th>
+                            <th>Precio</th>
                             <th>Cantidad Solicitada</th>
                         </tr>
                     </thead>
@@ -37,11 +38,13 @@
                             echo'<tr>
                             <td> <input type="checkbox" name="codartcheck" class="codigo" value="'.$resgistros["ID_PRODUCTO"].'" /></td>
                             <td>'.$resgistros["ID_PRODUCTO"].'</td>
-                            <td>'.$resgistros["DESCRIPCION_PRODUCTO"].'</td>    
+                            <td id="product_name">'.$resgistros["DESCRIPCION_PRODUCTO"].'</td>    
                             <td>'.$resgistros["DESCRIPCION_CATEGORIAS"].'</td>
                             <td>'.$resgistros["EXISTENCIA_PRODUCTO"].'</td>
 
-                            <td><input type="text" class="cantidad" value="'.$resgistros["CANTIDAD_REQUISICION"].'" readonly></td>
+                            <td><input type="text" class="precio" value=""></td>
+
+                            <td><input type="text" class="cantidad" value="'.$resgistros["CANTIDAD_REQUISICION"].'"></td>
                   
                              </tr>';
                          }
@@ -49,7 +52,7 @@
                     </tbody>
                 </table>
                 <br>
-                <a href="8-recepcionmercancia.php"><input type="button" class="btn btn-danger btn-sm" name="btnatras" value="Atras"></a>
+                <a href="recepcion.php"><input type="button" class="btn btn-danger btn-sm" name="btnatras" value="Atras"></a>
                 <input type="button" class="btn btn-primary btn-sm" id="boton" name="btnactped" value="Guardar Recepcion">
 
             </form>

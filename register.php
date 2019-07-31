@@ -18,6 +18,10 @@
 		<input type="password" minlength="7" data-name="Confirmacion de contrasena" name="repcontrasena" placeholder="Repetir Contraseña" class="input100">
 		<input type="email" id="email" name="email" data-name="Email" placeholder="Email" class="input50">
 		<input type="text" name="telefono" maxlength="11" data-name="Telefono" onkeypress="return solonumero(event);" placeholder="Teléfono" class="input50">
+		<input type="text" data-name="Pregunta de seguridad 1" name="question_one" placeholder="Pregunta de seguridad 1" class="input100">
+		<input type="text" data-name="Respuesta 1" name="answer_one" placeholder="Respuesta 1" class="input100">
+		<input type="text" data-name="Pregunta de seguridad 2" name="question_two" placeholder="Pregunta de seguridad 2" class="input100">
+		<input type="text" data-name="Respuesta 2" name="answer_two" placeholder="Respuesta 2" class="input100">
 		<input type="text" data-name="Direccion" name="direccion" placeholder="Dirección" class="input100">
 		<label style="text-align: center;">Fecha de Nacimiento</label>
 		<input type="date" data-name="Fecha de nacimiento" name="fechanac" class="input100">

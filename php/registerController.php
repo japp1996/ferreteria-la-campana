@@ -31,7 +31,7 @@ class RegisterUser
       if ($filas == 0) {
         if(filter_var($request->email, FILTER_VALIDATE_EMAIL)){
           if (strlen($request->email) <= 64) { 
-            $inser="INSERT INTO usuarios(CI_RIF, NOMBRE_USUARIOS, CONTRASENA, CORREO, TELEFONO, DIRECCION, FECHA_NACIMIENTO, ID_USUARIOS) VALUES ('".$request->tipodedoc."-".$request->cedula."','$request->nombre','$request->contrasena','$request->email','$request->telefono','$request->direccion','$request->fechanac','CLI')";
+            $inser="INSERT INTO usuarios(CI_RIF, NOMBRE_USUARIOS, CONTRASENA, CORREO, TELEFONO, DIRECCION, PREGUNTA_UNO, RESPUESTA_UNO, PREGUNTA_DOS, RESPUESTA_DOS, FECHA_NACIMIENTO, ID_USUARIOS) VALUES ('".$request->tipodedoc."-".$request->cedula."','$request->nombre','$request->contrasena','$request->email','$request->telefono','$request->direccion','$request->question_one','$request->answer_one','$request->question_two','$request->answer_two','$request->fechanac','CLI')";
             $ejecutar=mysqli_query($conexion, $inser);
           } elseif (strlen($email) > 64) {
             return json_encode(array('result'=> false, 'msg'=>'El campo Email debe contener maximo 64 caracteres'));

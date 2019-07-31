@@ -187,6 +187,9 @@
       if(res.data.result) {
         $('#registrodeProducto').modal('hide')
         Swal.fire('Felicidades',res.data.msg, 'success')
+        setTimeout(() => {
+          window.location = 'productos_list.php'
+        }, 2000);
       } else {
         Swal.fire('Lo sentimos',res.data.msg, 'warning')
       }
@@ -229,10 +232,14 @@
     var data = {}
     data.accion = 'delete'
     data.id = id
-    axios.post('php/actualizarart.php', data).then(res=>{
+    axios.post('php/actualizarart.php', data)
+    .then(res=>{
       if(res.data.result) {
         Swal.fire('Felicidades',res.data.msg, 'success')
-        $('#registrodeProducto').modal('close')
+        $('#registrodeProducto').modal('hide')
+        setTimeout(() => {
+          window.location = 'productos_list.php'
+        }, 2000);
       } else {
         Swal.fire('Lo sentimos',res.data.msg, 'warning')
       }

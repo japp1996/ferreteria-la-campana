@@ -10,7 +10,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="2-bienvenidauser.php">
+                <a class="navbar-brand" href="index">
                     FERRETERIA LA CAMPANA
                 </a>
             </div>
@@ -18,26 +18,28 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                  <ul class="nav navbar-nav navbar-letf" class="dropdown-menu">
                     <li>
-                        <a href="2-bienvenidauser.php">Inicio</a>
+                        <a href="index">Inicio</a>
                     </li>
                      
                     <li class="dropdown">
                         <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tablas<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                          <li><a href="productos.php">Articulos</a></li>
-                          <li><a href="categorias.php">Categorias</a></li>
-                          <li><a href="estados.php">Estado de Pedido</a></li>
-                          <li><a href="proveedores.php">Proveedores</a></li>
+                          <li><a href="productos">Articulos</a></li>
+                          <li><a href="categorias">Categorias</a></li>
+                          <li><a href="estados">Estado de Pedido</a></li>
+                          <li><a href="proveedores">Proveedores</a></li>
                         </ul>
                     </li>
 
                     <li class="dropdown">
                         <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Procesos<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                          <li><a href="pedido.php">Pedido</a></li>
-                          <li><a href="requisicion.php">Requisicion</a></li>
-                          <li><a href="recepcion.php">Recepcion</a></li>
-                          <li><a href="consultarestadopedido.php">Estatus de Pedido</a></li>             
+                          <li><a href="pedido">Pedido</a></li>
+                          <li><a href="requisicion">Requisicion</a></li>
+                          <li><a href="recepcion">Recepcion</a></li>
+                          <li><a href="consultarestadopedido">Estatus de Pedido</a></li>        
+                          <li><a href="movimiento_inventario">Movimiento Inventario</a></li>        
+
                         </ul>
                     </li>
 
@@ -45,9 +47,13 @@
                     <li class="dropdown">
                         <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Listados<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                        <li><a href="consultarcateg.php">Articulos</a></li>
-                          <li><a href="12-consultaruser.php" >Usuarios</a></li>
-                          <li><a href="consultarpedidos.php">Pedidos</a></li>
+                        <li><a href="productos_list">Articulos</a></li>
+                          <li><a href="12-consultaruser" >Usuarios</a></li>
+                          <li><a href="consultarpedidos">Pedidos</a></li>
+                          <li><a href="consultarestados">Estados</a></li>
+                          <li><a href="consultarproveedores">Proveedores</a></li>
+                          <li><a href="consultarcategorias">Categorias</a></li>
+                          <li><a href="consultarclientes">Clientes</a></li>
                         </ul>
                     </li>
 
@@ -55,17 +61,17 @@
                     <li class="dropdown">
                         <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mantenimiento<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                        <li><a href="respaldarbasededatos.php">Respaldar datos</a></li>
-                          <li><a href="restaurarbasededatos.php">Restaurar datos</a></li>
-                           <li><a href="usuarios.php" >Usuarios</a></li>
-                           <li><a href="auditoria_usuarios.php">Auditoria Usuarios</a></li>
+                        <li><a href="respaldarbasededatos">Respaldar datos</a></li>
+                          <li><a href="restaurarbasededatos">Restaurar datos</a></li>
+                           <li><a href="usuarios" >Usuarios</a></li>
+                           <li><a href="auditoria_usuarios">Auditoria Usuarios</a></li>
                           
                           
                         </ul>
                     </li>
 
                     <li class="dropdown">
-                        <a href="ayuda.php">Ayuda</a>
+                        <a href="ayuda">Ayuda</a>
                     </li>
 
                     <li class="dropdown">
@@ -80,5 +86,6 @@
                 </ul>
             </div>
         </div>
-</nav> 
-<?php include'php/cierrosesion.php';?>
+</nav>
+<div>
+<?php include 'php/cierrosesion.php';?>

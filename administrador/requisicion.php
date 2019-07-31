@@ -1,8 +1,8 @@
-<?php include"php/conexion.php";?>
+<?php include "php/conexion.php";?>
 <!DOCTYPE html>
-<?php include'include/head.html';?>
+<?php include 'include/head.html';?>
 <body>
-<?php include'include/menu.php'; ?>
+<?php include 'include/menu.php'; ?>
 
 <div class="container">
     <div class="row">
@@ -22,6 +22,7 @@
             <?php include "include/tablarequisicion.php"; ?>
             <br />
             <input  id="boton" type="button" class="btn btn-primary btn-sm" name="btnrealizarpedido" value="Realizar">
+            <a href="recepcion.php" id="ver" class="btn btn-danger btn-sm" name="btnverrpedido">Procesar recepción</a>
           </form>
         </div>
     </div>
@@ -30,7 +31,9 @@
 <?php include 'include/modalProveedor.php';?>  
 <?php include 'include/piedepagina.php';?>
 </div>
-<?php include'include/script.html';?>    
-<script type="text/javascript"><?php require'js/script-req.js';?></script>
+<?php include 'include/script.html';?>    
+<script type="text/javascript">
+  <?php require 'js/script-req.js';?>
+</script>
 </body>
 </html>

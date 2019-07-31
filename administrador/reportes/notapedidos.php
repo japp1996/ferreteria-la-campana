@@ -104,7 +104,7 @@ $total = $subtotal + $iva;
 $pdf->Cell(160,6,utf8_decode('SUBTOTAL'),1,0,'R');
 $pdf->Cell(30,6,utf8_decode($subtotal),1,1,'C');
 
-$pdf->Cell(160,6,utf8_decode('IVA'),1,0,'R');
+$pdf->Cell(160,6,utf8_decode('IVA').' (16%)',1,0,'R');
 $pdf->Cell(30,6,utf8_decode($iva),1,1,'C');
 
 $pdf->Cell(160,6,utf8_decode('TOTAL'),1,0,'R');

@@ -32,7 +32,7 @@ $consulta=mysqli_query($conexion, $sql);
                        <?php
                        while($resgistros=mysqli_fetch_array($consulta)) {
         echo'<tr>
-                <td class="noped"><a href="consultardetallespedido.php?id='.$resgistros["ID_PEDIDO"].'">'.$resgistros["ID_PEDIDO"].'</a></td>
+                <td class="noped"><a class="btn btn-primary btn-xs" href="consultardetallespedido.php?id='.$resgistros["ID_PEDIDO"].'">'.$resgistros["ID_PEDIDO"].'</a></td>
                 <td class="noped">'.$resgistros["FECHA_PEDIDO"].'</td>
                 <td class="noped">'.$resgistros["NOMBRE_USUARIOS"].'</td>
                 <td class="noped">'.$resgistros["ID_ESTADO"].'</td>

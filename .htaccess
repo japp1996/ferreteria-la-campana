@@ -1,0 +1,16 @@
+RewriteBase /ferreterialacampana
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html
+
+Options All -Indexes
+ErrorDocument 401 /ferreterialacampana/401.php
+ErrorDocument 403 /ferreterialacampana/403.php
+ErrorDocument 404 /ferreterialacampana/404.php
+ErrorDocument 500 /ferreterialacampana/500.php

@@ -22,11 +22,11 @@ $(document).ready(function() {
             data : datos,
             success : function (query) {
                 if (query.exito== 1) {
-                    alert("EL Pedido Fue Modificado Satisfactoriamente");
+                    Swal.fire("EL Pedido Fue Modificado Satisfactoriamente");
                     window.location="consultarpedidos.php";
                 }
                 if (query.error== 1) {
-                    alert("No Ha Seleccionado Ningun Producto");
+                    Swal.fire("No Ha Seleccionado Ningun Producto");
                 }
             }, 
             error : function (xhr, status) {

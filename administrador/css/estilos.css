@@ -75,3 +75,11 @@ h2{
 .closecookie:hover {
     color: #000;
 }
+
+.stock-min-true {
+    width: 10px;
+    height: 10px;
+    background: red;
+    display: inline-block;
+    border-radius: 50%;
+}

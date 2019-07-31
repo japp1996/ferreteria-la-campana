@@ -46,15 +46,15 @@ if (isset($_POST['registrar'])) {
                     
                     if ($ejecutar) {
                         $fecha=date('Y-m-d g:i:s-a');
-                        $auditoria="INSERT INTO auditoria_usuarios(ID_AUDITORIA,CI_RIF,OPERACION,DETALLES_OPERACION,FECHA) VALUES('','".$_SESSION['CI_RIF']."','Registro','Registro de proveedor $nombre','$fecha')";
+                        $auditoria="INSERT INTO auditoria_usuarios(CI_RIF,OPERACION,DETALLES_OPERACION,FECHA) VALUES('".$_SESSION['CI_RIF']."','Registro','Registro de proveedor $nombre','$fecha')";
                         mysqli_query($conexion, $auditoria);
         
                         echo '<br><div class="alert"><span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span><strong>Felicidades!</strong> El Proveedor ha sido registrado satisfactoriamente<br></div>';
                     } else {
                         echo '<br><div class="alert info">
-                            <span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span     > 
-                            <strong>Lo sentimos!</strong> El proveedor no pudo registrarse
-                            </div>  ';
+                        <span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span     > 
+                        <strong>Lo sentimos!</strong> El proveedor no pudo registrarse
+                        </div>  ';
                     }
                 } else{
                     echo '<br><div class="alert danger"><span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span><strong>Lo sentimos!</strong> Supero el limite permitido de caracteres por email<br></div>';

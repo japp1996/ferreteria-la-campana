@@ -32,7 +32,7 @@
 						$insert = 1;
 
 						$fecha=date('Y-m-d g:i:s-a');
-						$auditoria="INSERT INTO auditoria_usuarios(ID_AUDITORIA,CI_RIF,OPERACION,DETALLES_OPERACION,FECHA) VALUES('','".$_SESSION['CEDULA']."','Modificacion','Modificacion de datos de Pedido','$fecha')";
+						$auditoria="INSERT INTO auditoria_usuarios(CI_RIF,OPERACION,DETALLES_OPERACION,FECHA) VALUES(".$_SESSION['CEDULA']."','Modificacion','Modificacion de datos de Pedido','$fecha')";
 						mysqli_query($conexion, $auditoria);
 					}
 

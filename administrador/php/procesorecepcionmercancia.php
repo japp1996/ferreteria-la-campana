@@ -16,8 +16,8 @@ require_once ("conexion.php");
 					
 					//inserta el pedido
 
-					$sql = "INSERT INTO recepcion(ID_RECEPCION, FECHA_RECEPCION, CI_RIF)
-						VALUES ('','".date("Y-m-d")."','".$_SESSION["CI_RIF"]."')";
+					$sql = "INSERT INTO recepcion(FECHA_RECEPCION, CI_RIF)
+						VALUES ('".date("Y-m-d")."','".$_SESSION["CI_RIF"]."')";
 					$query = mysqli_query($conexion, $sql);
 					$id = mysqli_insert_id($conexion);
 
@@ -28,7 +28,7 @@ require_once ("conexion.php");
 				$query = mysqli_query($conexion, $sql);
 
 				//aparte inserta productos y sus cantidades asociados a un solo pedido
-				$sql = "INSERT INTO detalles_recepcion(ID_DETALLES_RECEPCION, ID_RECEPCION, ID_PRODUCTO, CANTIDAD_RECEPCIONADA)VALUES ('','$id','$productos[$i]','".$cantidades[$i]."')";
+				$sql = "INSERT INTO detalles_recepcion(ID_RECEPCION, ID_PRODUCTO, CANTIDAD_RECEPCIONADA)VALUES ($id','$productos[$i]','".$cantidades[$i]."')";
 
 				$query = mysqli_query($conexion, $sql);
 				// y Resta la cantidad de la tabla productos
@@ -41,7 +41,7 @@ require_once ("conexion.php");
 				$query = mysqli_query($conexion, $sql);
 
 				$fecha=date('Y-m-d g:i:s-a');
-				$auditoria="INSERT INTO auditoria_usuarios(ID_AUDITORIA,CI_RIF,OPERACION,DETALLES_OPERACION,FECHA) VALUES('','".$_SESSION['CI_RIF']."','Recepcion','Recepcion de Mercancia','$fecha')";
+				$auditoria="INSERT INTO auditoria_usuarios(CI_RIF,OPERACION,DETALLES_OPERACION,FECHA) VALUES(".$_SESSION['CI_RIF']."','Recepcion','Recepcion de Mercancia','$fecha')";
 				mysqli_query($conexion, $auditoria);
 			}
 		}

@@ -19,18 +19,18 @@
 					if (!(empty($cantidades[$i]))) {
 						if ($insert == 0) {
 							//inserta el pedido
-							$sql = "INSERT INTO requisicion(ID_REQUISICION, OBSERVACION_REQUISICION, FECHA_REQUISICION, CI_RIF, ID_PROVEEDOR)
-								VALUES ('','','".date("Y-m-d")."','".$_SESSION["CI_RIF"]."', '".$_POST["id_proveedor"]."')";
+							$sql = "INSERT INTO requisicion(OBSERVACION_REQUISICION, FECHA_REQUISICION, CI_RIF, ID_PROVEEDOR)
+								VALUES ('','".date("Y-m-d")."','".$_SESSION["CI_RIF"]."', '".$_POST["id_proveedor"]."')";
 							$query = mysqli_query($conexion, $sql);
 							$id = mysqli_insert_id($conexion);
 							$insert = 1;
 						}
 						//aparte inserta productos y sus cantidades asociados a un solo pedido
-						$sql = "INSERT INTO detalles_requisicion(ID_DETALLES_REQUISICION, ID_REQUISICION, ID_PRODUCTO,CANTIDAD_REQUISICION)VALUES ('','$id','$productos[$i]','".$cantidades[$i]."')";
+						$sql = "INSERT INTO detalles_requisicion(ID_REQUISICION, ID_PRODUCTO,CANTIDAD_REQUISICION)VALUES ($id','$productos[$i]','".$cantidades[$i]."')";
 						$query = mysqli_query($conexion, $sql);
 											
 						$fecha=date('Y-m-d g:i:s-a');
-						$auditoria="INSERT INTO auditoria_usuarios(ID_AUDITORIA,CI_RIF,OPERACION,DETALLES_OPERACION,FECHA) VALUES('','".$_SESSION['CI_RIF']."','Requisicion','Requisicion de Mercancia','$fecha')";
+						$auditoria="INSERT INTO auditoria_usuarios(CI_RIF,OPERACION,DETALLES_OPERACION,FECHA) VALUES(".$_SESSION['CI_RIF']."','Requisicion','Requisicion de Mercancia','$fecha')";
 						mysqli_query($conexion, $auditoria);
 					}
 				}

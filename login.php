@@ -11,8 +11,13 @@
         <input type="button" onclick="login()" value="Iniciar sesion" class="btniniciarsesion" name="ingresar" >
         <p class="linkiniciosesion">
             ¿Aun no tienes cuenta? 
-            <a href="/SistemaFerreteriaCampana/usuarios/register.php">
+            <a href="/ferreterialacampana/register.php">
                 Registrate aqui
+            </a>
+        </p>
+        <p class="linkiniciosesion">
+            <a href="/ferreterialacampana/forgot.php">
+                Olvide mi contraseña
             </a>
         </p>
 	</div>
@@ -34,7 +39,7 @@
         axios.post('php/loginController.php', data)
         .then(res => {
             if (res.data.result) {
-                window.location = res.data.msg+'/2-bienvenidauser.php'
+                window.location = res.data.msg+'/'
             } else {
                 Swal.fire('Estimado usuario!', res.data.msg, 'info')
             }

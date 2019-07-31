@@ -1,18 +1,18 @@
 <?php 
 if (isset($_POST['buscarus'])) {
     $cedula=$_POST['cedula'];
-        if ($cedula=="") {
-           echo '<br><div class="alert danger">
-            <span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span     > 
-            No ha introducido ningun RIF
-            <br>
-            </div>';
-        } else{
+    if ($cedula=="") {
+        echo '<br><div class="alert danger">
+        <span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span     > 
+        No ha introducido ningun RIF
+        <br>
+        </div>';
+    } else{
 
         $sql="SELECT DNI FROM proveedores WHERE DNI = '$cedula'";
         $consulta=mysqli_query($conexion, $sql);
         $filas=mysqli_num_rows($consulta);
-       
+    
         if ($filas==0) {
             echo '<br><div class="alert danger">
             <span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span     > 
@@ -45,7 +45,7 @@ if (isset($_POST['buscarus'])) {
                     </div>    
                 </div>
 
-             <div class="row">
+            <div class="row">
 
             <div class="col-xs-6">
                 <div class="form-group">
@@ -60,7 +60,7 @@ if (isset($_POST['buscarus'])) {
                     <label for="telefono">Telefono</label>
                     <input type="text" class="form-control" maxlength="11" id="telefono" name="telefonover" value="'; echo $telefono; echo '">';
 
-               echo '</div>
+            echo '</div>
             </div>
 
             <div class="col-xs-12">
@@ -69,14 +69,13 @@ if (isset($_POST['buscarus'])) {
                     <textarea type="text" class="form-control" id="direccion"  name="direccionver" >';echo $direccion; echo '</textarea>';
                 echo '</div>
                     </div>
-             
+            
                 </div>                                                  
-                  <input type="submit" class="btn btn-primary btn-sm" name="actualizar" value="Modificar">
-                  <input type="submit" onclick="" class="btn btn-danger btn-sm" name="eliminar" value="Eliminar">                                                                   
-        </form>';
+                <input type="submit" class="btn btn-primary btn-sm" name="actualizar" value="Modificar">
+                <input type="submit" onclick="" class="btn btn-danger btn-sm" name="eliminar" value="Eliminar">                                                                   
+            </form>';
         }        
     }
 }
 
-require "php/actualizarprov.php"; 
-?>
+require "php/actualizarprov.php";

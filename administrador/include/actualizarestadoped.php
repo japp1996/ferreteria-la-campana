@@ -4,25 +4,23 @@ if (isset($_POST['buscares'])) {
     $idped=$_POST['idpedbuscar'];
     if ($idped=="") {
       echo '<br><div class="alert danger">
-            <span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span     > 
-            No ha introducido ningun codigo
-            <br>
-            </div>';
-          }
-else{
+      <span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span     > 
+      No ha introducido ningun codigo
+      <br>
+      </div>';
+    } else {
 
-  $sql="SELECT ID_ESTADO FROM estado  WHERE ID_ESTADO = '$idped'   ";
-  $consulta=mysqli_query($conexion, $sql);
-  $filas=mysqli_num_rows($consulta);
+      $sql="SELECT ID_ESTADO FROM estado  WHERE ID_ESTADO = '$idped'   ";
+      $consulta=mysqli_query($conexion, $sql);
+      $filas=mysqli_num_rows($consulta);
        
-        if ($filas==0) {
-                     echo '<br><div class="alert danger">
-                     <span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span>
-                     Este codigo no esta registrado
-                     <br>
-                     </div>';
-        }
-        else{
+      if ($filas==0) {
+        echo '<br><div class="alert danger">
+        <span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span>
+        Este codigo no esta registrado
+        <br>
+        </div>';
+      } else {
 
         $sql="SELECT * FROM estado WHERE ID_ESTADO = '$idped'   ";
         $consulta=mysqli_query($conexion, $sql);
@@ -66,16 +64,11 @@ else{
          <button type="submit" class="btn btn-primary btn-sm" name="actualizar">Actualizar</button>
          <button type="submit" class="btn btn-danger btn-sm" name="eliminar">Eliminar</button>
 
-         </form> ';   
-
+         </form> ';
+      }
+    }
+} else {
+  $idped="";
+  $nameped="";
 }
-}
-}
-
-else{
-    $idped="";
-    $nameped="";
-}
-
 include "php/actualizarestadoped.php";
-?>

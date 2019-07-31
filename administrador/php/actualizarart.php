@@ -16,7 +16,7 @@
       mysqli_query($conexion,$sql);
     
       $fecha=date('Y-m-d g:i:s-a');
-      $auditoria="INSERT INTO auditoria_usuarios(ID_AUDITORIA,CI_RIF,OPERACION,DETALLES_OPERACION,FECHA) VALUES('','".$_SESSION['CI_RIF']."','Modificacion','Modificacion de datos de Articulo','$fecha')";
+      $auditoria="INSERT INTO auditoria_usuarios(CI_RIF,OPERACION,DETALLES_OPERACION,FECHA) VALUES('".$_SESSION['CI_RIF']."','Modificacion','Modificacion de datos de Articulo','$fecha')";
       mysqli_query($conexion, $auditoria);
 
       echo json_encode(array('result' => true, 'msg' => 'Los datos fueron modificados exitosamente'));
@@ -27,7 +27,7 @@
       mysqli_query($conexion,$sql);
 
       $fecha=date('Y-m-d g:i:s-a');
-      $auditoria="INSERT INTO auditoria_usuarios(ID_AUDITORIA,CI_RIF,OPERACION,DETALLES_OPERACION,FECHA) VALUES('','".$_SESSION['CI_RIF']."','Eliminacion','Eliminacion de Articulo','$fecha')";
+      $auditoria="INSERT INTO auditoria_usuarios(CI_RIF,OPERACION,DETALLES_OPERACION,FECHA) VALUES(".$_SESSION['CI_RIF']."','Eliminacion','Eliminacion de Articulo','$fecha')";
       mysqli_query($conexion, $auditoria);
 
       echo json_encode(array('result' => true, 'msg' => 'Los datos fueron eliminados exitosamente'));

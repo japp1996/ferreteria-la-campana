@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: "untitled-font-1";
-  src:url("/SistemaFerreteriaCampana/fonts/untitled-font-1.eot");
-  src:url("/SistemaFerreteriaCampana/fonts/untitled-font-1.eot?#iefix") format("embedded-opentype"),
-    url("/SistemaFerreteriaCampana/fonts/untitled-font-1.woff") format("woff"),
-    url("/SistemaFerreteriaCampana/fonts/untitled-font-1.ttf") format("truetype"),
-    url("/SistemaFerreteriaCampana/fonts/untitled-font-1.svg#untitled-font-1") format("svg");
+  src:url("/ferreterialacampana/fonts/untitled-font-1.eot");
+  src:url("/ferreterialacampana/fonts/untitled-font-1.eot?#iefix") format("embedded-opentype"),
+    url("/ferreterialacampana/fonts/untitled-font-1.woff") format("woff"),
+    url("/ferreterialacampana/fonts/untitled-font-1.ttf") format("truetype"),
+    url("/ferreterialacampana/fonts/untitled-font-1.svg#untitled-font-1") format("svg");
   font-weight: normal;
   font-style: normal;
 

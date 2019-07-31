@@ -7,16 +7,15 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-        <h3><p align="center">IMPORTAR REQUISICION</p></h3>
+        <h3><p align="center">RECEPCION</p></h3>
         <form action="" method="POST" class="datagrid">
 
         <table>
             <thead>
                 <tr>
-                    <th class="noped">N&deg; de Requisición</th>
+                    <th class="noped">Importar de Requisición</th>
                     <th class="noped">Fecha Requisición</th>
                     <th class="noped">Solicitante</th>
-                    <th class="noped">Observacion</th>
                 </tr>
             </thead>
             
@@ -30,10 +29,9 @@
                 $consulta=mysqli_query($conexion,$sql);
                 while($resgistros=mysqli_fetch_array($consulta)) {
                     echo'<tr>
-                    <td class="noped"><a href="9-realizarrecepcion.php?id='.$resgistros["ID_REQUISICION"].'">'.$resgistros["ID_REQUISICION"].'</a></td>
+                    <td class="noped"><a class="btn btn-primary btn-xs" href="9-realizarrecepcion.php?id='.$resgistros["ID_REQUISICION"].'">'.$resgistros["ID_REQUISICION"].'</a></td>
                     <td class="noped">'.$resgistros["FECHA_REQUISICION"].'</td> 
                     <td class="noped">'.$resgistros["NOMBRE_USUARIOS"].'</td>
-                    <td class="noped">'.$resgistros["OBSERVACION_REQUISICION"].'</td>
                     </tr>';
                 }
                 ?>

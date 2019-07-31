@@ -80,13 +80,13 @@ if (isset($_POST['buscarart'])) {
         </div>
         <div class="col-xs-2">
           <div class="form-group">
-            <label for="stock_min_up">Stock Min</label>
+            <label for="stock_min_up">Stock Minimo</label>
             <input type="text" data-name="Stock Minimo" class="form-control" id="stock_min_up"  name="stock_min_up" value="' ; echo $stock_min; echo '">
           </div>
         </div>
         <div class="col-xs-2">
           <div class="form-group">
-            <label for="stock_max_up">Stock Min</label>
+            <label for="stock_max_up">Stock Maximo</label>
             <input type="text" data-name="Stock Maximo" class="form-control" id="stock_max_up"  name="stock_max_up" value="' ; echo $stock_max; echo '">
           </div>
         </div>
