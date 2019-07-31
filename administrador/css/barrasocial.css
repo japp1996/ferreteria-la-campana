@@ -4,11 +4,11 @@
 
 @font-face {
   font-family: "untitled-font-1";
-  src:url("/ferreterialacampana/clientes/fonts/untitled-font-1.eot");
-  src:url("/ferreterialacampana/clientes/fonts/untitled-font-1.eot?#iefix") format("embedded-opentype"),
-    url("/ferreterialacampana/clientes/fonts/untitled-font-1.woff") format("woff"),
-    url("/ferreterialacampana/clientes/fonts/untitled-font-1.ttf") format("truetype"),
-    url("/ferreterialacampana/clientes/fonts/untitled-font-1.svg#untitled-font-1") format("svg");
+  src:url("administrador/fonts/untitled-font-1.eot");
+  src:url("administrador/fonts/untitled-font-1.eot?#iefix") format("embedded-opentype"),
+    url("administrador/fonts/untitled-font-1.woff") format("woff"),
+    url("administrador/fonts/untitled-font-1.ttf") format("truetype"),
+    url("administrador/fonts/untitled-font-1.svg#untitled-font-1") format("svg");
   font-weight: normal;
   font-style: normal;
 

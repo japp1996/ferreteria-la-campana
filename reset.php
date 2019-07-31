@@ -20,7 +20,7 @@ if (!$_SESSION){
         <input type="button" value="Recuperar" class="btniniciarsesion" name="ingresar" onclick="resetear()">
         <p class="linkiniciosesion">
             ¿Aun no tienes cuenta? 
-            <a href="/ferreterialacampana/register.php">
+            <a href="register.php">
                 Registrate aqui
             </a>
         </p>

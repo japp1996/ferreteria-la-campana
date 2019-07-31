@@ -1,8 +1,8 @@
-<?php include'php/conexion.php';?>
+<?php include 'php/conexion.php';?>
 <html lang="es">
-<?php include'include/head.html';?>
+<?php include 'include/head.html';?>
 <body>
-<?php include'include/menu.html';?>
+<?php include 'include/menu.html';?>
 <form action="php/loginController.php" role="form" id="login" method="POST" class="formregistro">
 	<h2>Iniciar Sesion</h2>
 	<div class="contenedorinputs">
@@ -11,18 +11,18 @@
         <input type="button" onclick="login()" value="Iniciar sesion" class="btniniciarsesion" name="ingresar" >
         <p class="linkiniciosesion">
             ¿Aun no tienes cuenta? 
-            <a href="/ferreterialacampana/register.php">
+            <a href="/register.php">
                 Registrate aqui
             </a>
         </p>
         <p class="linkiniciosesion">
-            <a href="/ferreterialacampana/forgot.php">
+            <a href="/forgot.php">
                 Olvide mi contraseña
             </a>
         </p>
 	</div>
 </form>
-<?php include'include/footer.html';?>
+<?php include 'include/footer.html';?>
 <script>
     function login() {
         let form = $('#login').serializeArray()

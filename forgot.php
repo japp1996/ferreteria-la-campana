@@ -10,7 +10,7 @@
         <input type="button" onclick="recovery()" value="Recuperar" class="btniniciarsesion" name="ingresar" >
         <p class="linkiniciosesion">
             ¿Aun no tienes cuenta? 
-            <a href="/ferreterialacampana/register.php">
+            <a href="register.php">
                 Registrate aqui
             </a>
         </p>

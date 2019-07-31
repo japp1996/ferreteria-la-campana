@@ -24,7 +24,7 @@ if (!$_SESSION){
         <input type="button" onclick="resetear()" value="Recuperar" class="btniniciarsesion" name="reset" >
         <p class="linkiniciosesion">
             ¿Aun no tienes cuenta? 
-            <a href="/ferreterialacampana/register.php">
+            <a href="register.php">
                 Registrate aqui
             </a>
         </p>
