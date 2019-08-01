@@ -1,6 +1,9 @@
-
 body{
     margin: auto;
+}
+
+i {
+    cursor: pointer !important;
 }
 
 .contacto{

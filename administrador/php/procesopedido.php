@@ -60,9 +60,6 @@
 						$sql = "INSERT INTO movimiento_inventario (ID_PRODUCTO, CANTIDAD, TIPO, FECHA) VALUES ('".$productos[$i]."', '".$cantidades[$i]."', '1', '$fecha')";
 						$query = mysqli_query($conexion, $sql);
 		
-						$fecha = date('Y-m-d g:i:s-a');
-						$auditoria = "INSERT INTO auditoria_usuarios(CI_RIF,OPERACION,DETALLES_OPERACION,FECHA) VALUES('".$_SESSION['CI_RIF']."','Pedido','Creacion de Pedido Nro $id','$fecha')";
-						mysqli_query($conexion, $auditoria);
 					} else {
 						$data = ["result" => false, 'msg' => 'En uno de sus productos marcados no podemos crear la cantidad requerida'];
 						die(json_encode($data));
@@ -72,12 +69,15 @@
 		}
 		// si se inserto el pedido correctamente enviar variable de exito
 		if ($insert > 0) {
+			$fecha = date('Y-m-d H:i:s');
+			$auditoria = "INSERT INTO auditoria_usuarios(CI_RIF,OPERACION,DETALLES_OPERACION,FECHA) VALUES('".$_SESSION['CI_RIF']."','Pedido','Creacion de Pedido Nro $id','$fecha')";
+			mysqli_query($conexion, $auditoria);
 			$data = ["result" => true, 'msg' => "Pedido se ha creado con exito", 'id' => $id];
 		} else {
 			$data = ["result" => false, 'msg' => "No se pudo crear el pedido"];
 		}
 		//sino enviar variable de error
 	} else {
-		$data = ["result" => false, 'msg' => "No ha seleccionado ningun producto"];
+		$data = ["result" => false, count($productos),'msg' => "No ha seleccionado ningun producto"];
 	}
 	die(json_encode($data));

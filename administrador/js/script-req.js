@@ -1,7 +1,9 @@
 $(document).ready(function() {
+
     $("#boton").click(function() {
         var proveedor = $('#proveedor_id').val()
         if (proveedor == '') {
+            $('#proveedor_id').focus()
             Swal.fire('Atencion', 'No ha seleccionado ningun proveedor', 'warning')
             return false 
         }
@@ -41,32 +43,17 @@ $(document).ready(function() {
             "id_proveedor": proveedor
         }
 
-        $.ajax({
-            type : "POST",
-            url : "php/procesorequisicion.php",
-            dataType : "json",
-            data : datos,
-            success : function (query) {
-                if (query.exito == 1) {
-                    Swal.fire("Felicidades","Requisicion realizada Satisfactoriamente", "success")
-                }
-
-                switch (query.error) {
-                    case 1:
-                        Swal.fire("Atencion","No Ha Seleccionado Ningun Producto", "warning")                        
-                        break;
-                    case 3:
-                        Swal.fire("Atencion","No Ha Colocado Cantidad", "warning")
-                        break;
-                    case 4:
-                        Swal.fire("Atencion","No Ha Colocado Cantidad", "warning")
-                        break;                    
-                    default:
-                        break;
-                }
-            }, error : function (xhr, status) {
-                Swal.fire("Estimado usuario", "Hubo un error", "error")
+        axios.post("php/procesorequisicion.php", datos)
+        .then(query => {
+            if (query.data.result) {
+                Swal.fire("Felicidades","Requisicion realizada Satisfactoriamente", "success")
+                var ventana = window.open("reportes/notarequisicion.php?nope="+query.data.id, "Requisición", "width=1000, height=1000")
+            } else {
+                Swal.fire("Atencion", query.data.msg, "warning")                        
             }
+        }).catch(erro => {
+            Swal.fire("Estimado usuario", "Hubo un error", "error")
         })
     })
 })
+

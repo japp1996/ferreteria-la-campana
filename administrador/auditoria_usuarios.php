@@ -46,7 +46,7 @@ include 'include/menu.php';
                 </form>
                 <div class="datagrid">
                     <h3><p align="center">Usuarios</p></h3>
-                    <table>
+                    <table id="listado">
                         <thead>
                         <tr>
                             <th>Fecha y Hora</th>

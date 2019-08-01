@@ -1,8 +1,8 @@
-<?php require'php/conexion.php';?>
+<?php require 'php/conexion.php';?>
 <!DOCTYPE html>
-<?php include'include/head.html';?>
+<?php include 'include/head.html';?>
 <body>
-<?php include'include/menu.php';?>
+<?php include 'include/menu.php';?>
 
 <?php 
 $consulta="SELECT usuarios.NOMBRE_USUARIOS 
@@ -61,7 +61,7 @@ while ($row=mysqli_fetch_array($resultado)) {
 </form>      
 <br>
 <form method="POST" action="reportes/notadeentrega.php?nope=<?php echo $_REQUEST['id']; ?>">
-<button style="position: relative; left: 45%; right: 45%;" type="submit" class="btn btn-primary btn-sm" name="imprimir">Exportar PDF</button>
+<a href="reportes/notapedidos.php?nope=<?php echo $_REQUEST['id']; ?>" class="btn btn-primary btn-sm" style="position: relative; left: 45%; right: 45%;" name="imprimir" target="_blank">Exportar PDF</a>  
 
 <?php }?>
 

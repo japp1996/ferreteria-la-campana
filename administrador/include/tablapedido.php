@@ -7,13 +7,21 @@ $sql = "SELECT ID, ID_CATEGORIAS, DESCRIPCION_CATEGORIAS FROM categorias
 $query = mysqli_query($conexion, $sql);
 if (mysqli_num_rows($query) == 0) {
 ?>
-<table>
+<table id="listado">
     <thead>
-    
+        <tr>
+            <th></th>
+            <th>Código</th>
+            <th>Descripcion Articulo</th>
+            <th>Categoria</th>
+            <th>Existencia</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+        </tr>
     </thead>
     <tbody>
         <tr>
-            <td style="text-align: center;font-size: 36px;font-weight: 900;">
+            <td colspan="6" style="text-align: center;font-size: 36px;font-weight: 900;">
             NO HAY PRODUCTOS PARA LA VENTA
             </td>
         </tr>
@@ -27,7 +35,7 @@ if (mysqli_num_rows($query) == 0) {
     ?>
         <button type="button" class="accordion"><?php echo $categoria->DESCRIPCION_CATEGORIAS; ?></button>
         <div class="panel">
-            <table id="listado">
+            <table id="listado_pedido">
                 <thead>
                     <tr>
                         <th></th>

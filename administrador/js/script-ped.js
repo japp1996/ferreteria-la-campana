@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $("#boton").click(function() {
-        var tbody= $('#listado tbody');
+        var tbody= $('#listado_pedido tbody');
         var pedido= "";
         var cantidad= "";
         var withoutQ = false
@@ -22,7 +22,6 @@ $(document).ready(function() {
         if (withoutQ) {
             return
         }
-
 
         var datos= {"pedido" : pedido, "cantidades" : cantidad};
 

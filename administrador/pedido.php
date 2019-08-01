@@ -1,6 +1,6 @@
 <?php require "php/conexion.php";?>
 <!DOCTYPE html>
-<?php include 'include/head.php';?>
+<?php include 'include/head.html';?>
 <body>
 <?php include 'include/menu.php';?>
 <div class="container">

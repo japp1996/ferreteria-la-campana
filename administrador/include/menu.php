@@ -22,7 +22,11 @@
                     </li>
                      
                     <li class="dropdown">
-                        <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tablas<span class="caret"></span></a>
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-table" aria-hidden="true"></i>
+                            Tablas
+                            <span class="caret"></span>
+                        </a>
                         <ul class="dropdown-menu">
                           <li><a href="productos">Articulos</a></li>
                           <li><a href="categorias">Categorias</a></li>
@@ -32,7 +36,11 @@
                     </li>
 
                     <li class="dropdown">
-                        <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Procesos<span class="caret"></span></a>
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-tasks" aria-hidden="true"></i>
+                            Procesos
+                            <span class="caret"></span>
+                        </a>
                         <ul class="dropdown-menu">
                           <li><a href="pedido">Pedido</a></li>
                           <li><a href="requisicion">Requisicion</a></li>
@@ -45,10 +53,14 @@
 
 
                     <li class="dropdown">
-                        <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Listados<span class="caret"></span></a>
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-list-alt" aria-hidden="true"></i>
+                            Listados
+                            <span class="caret"></span>
+                        </a>
                         <ul class="dropdown-menu">
                         <li><a href="productos_list">Articulos</a></li>
-                          <li><a href="12-consultaruser" >Usuarios</a></li>
+                          <li><a href="user_list" >Usuarios</a></li>
                           <li><a href="consultarpedidos">Pedidos</a></li>
                           <li><a href="consultarestados">Estados</a></li>
                           <li><a href="consultarproveedores">Proveedores</a></li>
@@ -59,7 +71,11 @@
 
 
                     <li class="dropdown">
-                        <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mantenimiento<span class="caret"></span></a>
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-gear" aria-hidden="true"></i>
+                            Mantenimiento
+                            <span class="caret"></span>
+                        </a>
                         <ul class="dropdown-menu">
                         <li><a href="respaldarbasededatos">Respaldar datos</a></li>
                           <li><a href="restaurarbasededatos">Restaurar datos</a></li>
@@ -71,17 +87,23 @@
                     </li>
 
                     <li class="dropdown">
-                        <a href="ayuda">Ayuda</a>
+                        <a href="ayuda">
+                            <i class="fa fa-question-circle-o" aria-hidden="true"> </i>
+                            Ayuda
+                        </a>
                     </li>
 
                     <li class="dropdown">
-                      <?php echo "<a href='?modo=desconectar'>Cerrar</a>"?>
+                      <?php echo "<a href='?modo=desconectar'><i class='fa fa-sign-out' aria-hidden='true'></i> Cerrar</a>"?>
                     </li>
                      
                     <li>
                         <div class="chip">
-                           <p style="color:#fff; margin-left: 120px; margin-top: 15px;" class=""><?php echo $_SESSION['NOMBRE_USUARIOS'] ;?></p> 
-                         </div>    
+                            
+                            <p style="color:#fff; margin-left: 120px; margin-top: 15px;" class="">
+                                <?php echo $_SESSION['NOMBRE_USUARIOS'] ;?>
+                            </p>
+                        </div>
                     </li>
                 </ul>
             </div>

@@ -44,7 +44,7 @@ else{
 
                 <div class="datagrid">
                     <h3><p align="center">Articulos</p></h3>
-                    <table>
+                    <table id="listado">
                         <thead>
                             <tr>
                                 <th>Codigo Producto</th>

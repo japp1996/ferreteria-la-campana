@@ -42,7 +42,7 @@ include 'include/menu.php';?>
 
             <div class="datagrid">
                     <h3><p align="center">Usuarios</p></h3>
-                    <table>
+                    <table id="listado">
                         <thead>
                           <tr>
                             <th>Cédula</th>

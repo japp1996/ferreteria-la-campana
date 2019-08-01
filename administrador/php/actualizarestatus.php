@@ -1,13 +1,13 @@
 <?php 
 include "conexion.php";
 
-if (isset($_POST['procesar'])) {
    
    $status=$_POST['estadoped'];
    $cancelado="ANULADO";
    $entregado="ENTREGADO";
    $noped=$_POST['noped'];
 
+   //ANULADO
    if ($status == $cancelado) {
       
       $sql= "SELECT detalles_pedido.ID_PRODUCTO, detalles_pedido.CANTIDAD_PRODUCTO FROM detalles_pedido WHERE ID_PEDIDO='$noped'";
@@ -32,7 +32,7 @@ if (isset($_POST['procesar'])) {
                <strong>Importante!</strong> El pedido ha sido anulado, la cantidad ha sido regresada al stock.
                <br></div>';  
    } elseif ($status == $entregado) {
-   
+      //PROCESADO ENTREGADO
       $update="UPDATE pedidos SET ID_ESTADO='$status' WHERE ID_PEDIDO='$noped'";
       mysqli_query($conexion, $update);
       $fecha=date('Y-m-d g:i:s-a');
@@ -46,7 +46,7 @@ if (isset($_POST['procesar'])) {
                <br>
          </div>';
    } else {
-
+      //PROCESADO RESTAURADO
       $sql = "UPDATE pedidos SET ID_ESTADO = '$status' WHERE ID_PEDIDO = '$noped'";
       mysqli_query($conexion, $sql);
       $fecha=date('Y-m-d g:i:s-a');
@@ -62,7 +62,3 @@ if (isset($_POST['procesar'])) {
             ';  
    }
    echo '<meta http-equiv="Refresh" content="2;url=consultarpedidos.php"> ';
-} else{
-   $status="";
-   $noped="";
-}

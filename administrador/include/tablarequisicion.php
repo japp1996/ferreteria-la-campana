@@ -27,26 +27,31 @@ if (mysqli_num_rows($query) == 0) {
                                 <tr>
                                     <td>
                                         <input type="checkbox" id="check_'.$registros["ID"].'" class="codigo" value="'.$registros["ID"].'" /> 
-                                        <label for="check_'.$registros["ID"].'">'.utf8_decode($registros["ID_PRODUCTO"]).'</labe>
+                                        <label for="check_'.$registros["ID"].'">'.utf8_decode($registros["ID_PRODUCTO"]).'</label>
                                     </td>
+
                                     <td id="product_name">'.$registros["DESCRIPCION_PRODUCTO"].'</td>
-                                    <td>'.$registros["DESCRIPCION_CATEGORIAS"].'</td>
-                                    ';
+                                    
+                                    <td>'.$registros["DESCRIPCION_CATEGORIAS"].'</td>';
                                    
-                                $table.='<td><b>'.$registros["EXISTENCIA_PRODUCTO"].'</b>';
-                                if ($registros['EXISTENCIA_PRODUCTO'] <= $registros['STOCK_MIN']) {
-                                    $table.="  ___ REPONER STOCK <div class='stock-min-true'></div>";
-                                }
-                                $table.='</td>';
-                                $id = $registros["ID"];
-                                $sql = "SELECT prv_prd.ID_PRODUCTO AS ID, prv.NOMBRE FROM proveedor_producto AS prv_prd 
-                                            INNER JOIN proveedores as prv
-                                                ON prv.ID = prv_prd.ID_PROVEEDOR
-                                                    WHERE prv_prd.ID_PRODUCTO = '$id'";
-                                $query = mysqli_query($conexion, $sql);
-                                $table.='<td class=""><input type="text" class="cantidad" onkeypress="solonumero(event)"></td>
-                                </tr>
-                            ';
+                                    $table.='<td>
+                                                <b>'.$registros["EXISTENCIA_PRODUCTO"].'</b>';
+                                        if ($registros['EXISTENCIA_PRODUCTO'] <= $registros['STOCK_MIN']) {
+                                            $table.="  ___ REPONER STOCK <div class='stock-min-true'></div>";
+                                        }
+                                    $table.='</td>';
+                                    
+                                    $id = $registros["ID"];
+                                    $sql = "SELECT prv_prd.ID_PRODUCTO AS ID, prv.NOMBRE FROM proveedor_producto AS prv_prd 
+                                                INNER JOIN proveedores as prv
+                                                    ON prv.ID = prv_prd.ID_PROVEEDOR
+                                                        WHERE prv_prd.ID_PRODUCTO = '$id'";
+                                    $query = mysqli_query($conexion, $sql);
+                                    
+                                    $table.='<td class="">
+                                                <input type="text" class="cantidad" maxlength="4" onkeypress="return solonumero(event)">
+                                            </td>
+                                </tr>';
                                 echo $table;
                         //}
                     }                    

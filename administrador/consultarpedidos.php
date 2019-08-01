@@ -17,7 +17,7 @@ $consulta=mysqli_query($conexion, $sql);
             <h3><p align="center">Consulte su pedido</p></h3>
                 <div class="datagrid">
 
-                 <table>
+                 <table id="listado">
                         <thead>
                         <tr>
                             <th class="noped">N°</th>

@@ -10,7 +10,7 @@
         <h3><p align="center">RECEPCION</p></h3>
         <form action="" method="POST" class="datagrid">
 
-        <table>
+        <table id="listado">
             <thead>
                 <tr>
                     <th class="noped">Importar de Requisición</th>

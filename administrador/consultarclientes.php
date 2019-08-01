@@ -9,7 +9,7 @@
             <div class="col-xs-15">
             <h3><p align="center">CLIENTES</p></h3>
                 <form action="reportes/notapedidos.php?nope=<?php echo $_REQUEST['id']; ?>" method="POST" class="datagrid">
-                    <table>
+                    <table id="listado">
                         <thead>
                             <tr>
                                 <th>ID</th>
